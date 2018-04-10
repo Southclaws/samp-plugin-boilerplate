@@ -10,9 +10,8 @@ The code here acts as the translation between AMX data types and native types.
 #include "natives.hpp"
 #include "plugin-natives/NativeFunc.hpp"
 
-PAWN_NATIVE_DEFN(projectname, Function, bool())
+PAWN_NATIVE_DEFN(projectname, Function, int())
 {
     logprintf("Function called");
-    std::string s;
     return 0;
 }

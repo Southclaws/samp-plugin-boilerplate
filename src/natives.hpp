@@ -14,6 +14,6 @@ Contains all the `PAWN_NATIVE_DECL` for native function declarations.
 #include "common.hpp"
 #include "plugin-natives/NativeFunc.hpp" // must be included last
 
-PAWN_NATIVE_DECL(projectname, Function, bool())
+PAWN_NATIVE_DECL(projectname, Function, int())
 
 #endif

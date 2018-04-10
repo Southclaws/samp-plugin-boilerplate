@@ -1,0 +1,11 @@
+{
+  "user": "username",
+  "repo": "projectname",
+  "entry": "test/gamemodes/test.pwn",
+  "output": "test/gamemodes/test.amx",
+  "dependencies": ["Southclaws/samp-stdlib"],
+  "dev_dependencies": ["pawn-lang/YSI-Includes"],
+  "runtime": {
+    "plugins": ["username/projectname"]
+  }
+}

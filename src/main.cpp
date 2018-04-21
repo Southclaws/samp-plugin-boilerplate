@@ -17,6 +17,11 @@ The "main" source file with most of the boilerplate code. Includes the
 
 logprintf_t logprintf;
 
+extern "C" AMX_NATIVE_INFO nativeList[] = {
+    { "Function", Natives::Function },
+    { 0, 0 }
+};
+
 PLUGIN_EXPORT unsigned int PLUGIN_CALL Supports()
 {
     return SUPPORTS_VERSION | SUPPORTS_AMX_NATIVES;
@@ -31,7 +36,11 @@ PLUGIN_EXPORT bool PLUGIN_CALL Load(void** ppData)
 
 PLUGIN_EXPORT int PLUGIN_CALL AmxLoad(AMX* amx)
 {
-    return pawn_natives::AmxLoad(amx);
+    // when plugin-natives gets fixed for GCC:
+    // remove this line:
+    return amx_Register(amx, nativeList, -1);
+    // and uncomment this line:
+    // return pawn_natives::AmxLoad(amx);
 }
 
 PLUGIN_EXPORT int PLUGIN_CALL Unload()

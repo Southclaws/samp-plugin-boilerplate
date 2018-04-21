@@ -10,8 +10,13 @@ The code here acts as the translation between AMX data types and native types.
 #include "natives.hpp"
 #include "plugin-natives/NativeFunc.hpp"
 
-PAWN_NATIVE_DEFN(projectname, Function, int())
+// when plugin-natives gets fixed for GCC:
+// remove the "cell(AMX*, cell*)" function headers
+cell Natives::Function(AMX* amx, cell* params)
+// and replace them with these macros - keep in mind these macros support
+// automatic parameter casting so you can remove that from your own code.
+// PAWN_NATIVE_DEFN(projectname, Function, int())
 {
     logprintf("Function called");
-    return 0;
+    return 1;
 }

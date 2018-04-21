@@ -11,7 +11,6 @@ test-setup:
 # -
 
 test-windows:
-	-cp test/plugins/Debug/projectname.dll test/plugins/projectname.dll
 	sampctl package build
 	cd test && sampctl server run
 

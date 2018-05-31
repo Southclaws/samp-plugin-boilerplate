@@ -36,11 +36,7 @@ PLUGIN_EXPORT bool PLUGIN_CALL Load(void** ppData)
 
 PLUGIN_EXPORT int PLUGIN_CALL AmxLoad(AMX* amx)
 {
-    // when plugin-natives gets fixed for GCC:
-    // remove this line:
     return amx_Register(amx, nativeList, -1);
-    // and uncomment this line:
-    // return pawn_natives::AmxLoad(amx);
 }
 
 PLUGIN_EXPORT int PLUGIN_CALL Unload()
@@ -48,7 +44,7 @@ PLUGIN_EXPORT int PLUGIN_CALL Unload()
     return 1;
 }
 
-PLUGIN_EXPORT int PLUGIN_CALL AmxUnload()
+PLUGIN_EXPORT int PLUGIN_CALL AmxUnload(AMX* amx)
 {
     return 1;
 }

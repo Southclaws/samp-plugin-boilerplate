@@ -12,7 +12,6 @@ Contains all the `PAWN_NATIVE_DECL` for native function declarations.
 #include <amx/amx2.h>
 
 #include "common.hpp"
-#include "plugin-natives/NativeFunc.hpp" // must be included last
 
 namespace Natives {
 cell Function(AMX* amx, cell* params);

@@ -13,7 +13,6 @@ The "main" source file with most of the boilerplate code. Includes the
 
 #include "common.hpp"
 #include "natives.hpp"
-#include "plugin-natives/NativesMain.hpp" // must be included last
 
 logprintf_t logprintf;
 

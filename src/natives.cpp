@@ -8,9 +8,10 @@ The code here acts as the translation between AMX data types and native types.
 */
 
 #include "natives.hpp"
+#include "pawn-natives/NativeFunc.hpp"
 
-cell Natives::Function(AMX* amx, cell* params)
+PAWN_NATIVE_DEFN(Natives, MyFunction, int())
 {
-    logprintf("Function called");
+    logprintf("My Function called");
     return 1;
 }

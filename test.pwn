@@ -10,7 +10,7 @@ main() {
 }
 
 Test:RunTest() {
-    new ret = Function();
+    new ret = MyFunction();
     printf("ret: %d", ret);
     ASSERT(ret == 1);
 }

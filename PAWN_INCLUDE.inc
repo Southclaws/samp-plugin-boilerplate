@@ -12,4 +12,4 @@
 
 // don't forget to change the above include guard to match the file name!
 
-native Function();
+native MyFunction();

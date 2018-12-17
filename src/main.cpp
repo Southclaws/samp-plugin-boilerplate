@@ -10,7 +10,7 @@ The "main" source file with most of the boilerplate code. Includes the
 
 #include <amx/amx.h>
 #include <plugincommon.h>
-#include <pawn-natives/NativesMain.h>
+#include <pawn-natives/NativesMain.hpp>
 
 #include "common.hpp"
 #include "natives.hpp"

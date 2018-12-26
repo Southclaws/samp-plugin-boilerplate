@@ -14,3 +14,13 @@ before_script:
 
 script:
   - make
+
+deploy:
+  on:
+    all_branches: true
+  provider: bintray
+  file: bintray.json
+  user: southclaws
+  key:
+    secure: hGxODvcBYcNnTAXDIbbI6bAYxrWOH1i+GNeIu2QMfo0F15tmxhnW2JErU8H3k2LD2zSiGV3DgYlDAiQNXb0Pl/j54rW1geXIQI3OUhTZisBqUg53Mc3Ushy5Rh6QaEmuAiKWmKVEJLDyGf51JDB5N++UXtk963vu4ifpGS+dxLEHgb8G+AUj23mrjk2m07d2cayhk3j3TmPieLbZGSiA3m7KOkBRAshO4trPj0CmQF3Thqt64hJGsTUxOpOIbeTczALrUnyTPjpzz/JzUHgNtCM1nV4cdElv8BBSrPY9upOJBGaDa59OGINFBrUyPC5eGr2Mx4wQ+50rk7gvDQlf1uZJV/oemNm7Z+S1FSH5UiyRRqVdtmzrr+8+aevAYLBcNYGd2vcLNA0Bkz/2c5ChaJ390ExopvheU2KP1ZjESoQxRJtWObo49Jnao0kJx3pmNFQ29Z8plo4oB4QGSRI+GXtVLHX54AHtvmsSyNz1rcoDVzd107ySKMF5jzhFvbtbFaN9P00noY/rtvM3SIvVG1PGhV+hdAzeblz0ZLTW3Bz9HB3DEi//zLZD7IAMsaevO3MQvxAOR/l//kfeskyMFXWlGYQesKog4VjIhtoD0WAWufWd4vuxzSAzUBPqLbYmDlLh9yJHu+dp2WactinAUvHPx1Qp4UN6elrUD1tPdnY=
+  skip_cleanup: true

@@ -1,0 +1,20 @@
+{
+  "package": {
+    "name": "builds",
+    "repo": "samp-plugin-boilerplate",
+    "subject": "southclaws"
+  },
+  "version": {
+    "name": "latest"
+  },
+  "files": [
+    {
+      "includePattern": "test/plugins/projectname.so",
+      "uploadPattern": "$1",
+      "matrixParams": {
+        "override": 1
+      }
+    }
+  ],
+  "publish": true
+}

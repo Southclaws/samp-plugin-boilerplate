@@ -178,8 +178,3 @@ information.
 This configures Appveyor to build the Windows version of the plugin whenever commits as pushed to GitHub. It will also
 upload the resulting `.dll` file to Bintray after a successful build. You must configure the Bintray fields with your
 own details. See [this page](https://www.appveyor.com/docs/deployment/bintray/) for more information.
-
-## Conclusion
-
-I hope someone found this useful for their next plugin, if there are any actual problems in the boilerplate code/setup I
-shall create a new repo and cherry-pick the commit over so it can be modified for future users.

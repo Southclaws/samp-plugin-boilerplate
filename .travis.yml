@@ -3,6 +3,11 @@ compiler:
   - clang
   - gcc
 
+addons:
+  apt:
+    packages:
+      - g++-multilib
+
 before_script:
   - mkdir build && cd build
   - cmake ..

@@ -16,7 +16,7 @@ build_script:
   - cmake --build . --config %CONFIGURATION%
 
 artifacts:
-  - path: test/plugins/{build}/projectname.dll
+  - path: test/plugins/$(configuration)/projectname.dll
     name: Plugin
 
 deploy:

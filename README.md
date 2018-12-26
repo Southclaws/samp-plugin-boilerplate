@@ -166,6 +166,19 @@ If you're new to docker, this file declares an "Image" which is an isolated file
 system - in our case it derives from `maddinat0r/debian-samp` which is a Debian image built specifically for compiling
 SA:MP plugins by maddinat0r. This means you can compile an .so on Windows very easily by running `make build-container`
 
+### `.travis.yml` and `bintray.json`
+
+This configures Travis CI to build the Linux version of the plugin whenever commits as pushed to GitHub. It will also
+upload the resulting `.so` file to Bintray after a successful build. You must configure the Bintray fields and
+`bintray.json` with your own details. See [this page](https://docs.travis-ci.com/user/deployment/bintray/) for more
+information.
+
+### `appveyor.yml`
+
+This configures Appveyor to build the Windows version of the plugin whenever commits as pushed to GitHub. It will also
+upload the resulting `.dll` file to Bintray after a successful build. You must configure the Bintray fields with your
+own details. See [this page](https://www.appveyor.com/docs/deployment/bintray/) for more information.
+
 ## Conclusion
 
 I hope someone found this useful for their next plugin, if there are any actual problems in the boilerplate code/setup I

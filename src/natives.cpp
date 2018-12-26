@@ -9,7 +9,7 @@ The code here acts as the translation between AMX data types and native types.
 
 #include "natives.hpp"
 
-cell MyFunction(AMX* amx, cell* params) {
+cell Natives::MyFunction(AMX* amx, cell* params) {
     logprintf("Hello world!");
     return 0;
 }

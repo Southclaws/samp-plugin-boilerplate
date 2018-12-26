@@ -7,5 +7,17 @@
   "dev_dependencies": ["pawn-lang/YSI-Includes"],
   "runtime": {
     "plugins": ["username/projectname"]
-  }
+  },
+  "resources": [
+    {
+      "name": "projectname.so",
+      "archive": false,
+      "platform": "linux"
+    },
+    {
+      "name": "projectname.dll",
+      "archive": false,
+      "platform": "windows"
+    }
+  ]
 }

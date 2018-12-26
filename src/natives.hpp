@@ -13,6 +13,8 @@ Contains all the `PAWN_NATIVE_DECL` for native function declarations.
 
 #include "common.hpp"
 
-PAWN_NATIVE_DECL(Natives, MyFunction, int());
+namespace Natives {
+cell MyFunction(AMX* amx, cell* params);
+}
 
 #endif

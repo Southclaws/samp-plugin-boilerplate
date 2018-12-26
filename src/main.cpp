@@ -10,7 +10,6 @@ The "main" source file with most of the boilerplate code. Includes the
 
 #include <amx/amx.h>
 #include <plugincommon.h>
-#include <pawn-natives/NativesMain.hpp>
 
 #include "common.hpp"
 #include "natives.hpp"
@@ -29,9 +28,14 @@ PLUGIN_EXPORT bool PLUGIN_CALL Load(void** ppData)
     return true;
 }
 
+extern "C" const AMX_NATIVE_INFO native_list[] = {
+    { "MyFunction", Natives::MyFunction },
+    { NULL, NULL }
+};
+
 PLUGIN_EXPORT int PLUGIN_CALL AmxLoad(AMX* amx)
 {
-    return pawn_natives::AmxLoad(amx);
+    return amx_Register(amx, native_list, -1);
 }
 
 PLUGIN_EXPORT int PLUGIN_CALL Unload()

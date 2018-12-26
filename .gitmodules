@@ -4,6 +4,3 @@
 [submodule "lib/cmake-modules"]
 	path = lib/cmake-modules
 	url = https://github.com/Zeex/cmake-modules
-[submodule "lib/pawn-natives"]
-	path = lib/pawn-natives
-	url = https://github.com/Y-Less/pawn-natives

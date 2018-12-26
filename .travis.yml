@@ -13,6 +13,7 @@ before_script:
 
 script:
   - make
+  - cd ..
 
 deploy:
   on:

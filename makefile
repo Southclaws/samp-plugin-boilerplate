@@ -10,22 +10,23 @@ test-setup:
 # Run Tests
 # -
 
-test-windows:
+test-native:
 	sampctl package build
 	cd test && sampctl server run
 
-test-linux:
+test-container:
 	sampctl package build
-	cd test && sampctl server run
+	cd test && sampctl server run --container
 
 # -
-# Build (Linux)
+# Build inside container
 # -
 
-build-linux:
+build-container:
 	rm -rf build
 	docker build -t southclaws/projectname-build .
 	docker run -v $(shell pwd)/test/plugins:/root/test/plugins southclaws/projectname-build
 
+# this make target is only run inside the container
 build-inside:
 	cd build && cmake .. && make

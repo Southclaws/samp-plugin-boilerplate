@@ -103,10 +103,21 @@ cd build
 cmake ..
 ```
 
-And that will generate a Visual Studio project inside `build/` ready for you to open in Visual Studio.
+
+And that will generate a Visual Studio project inside `build/` ready for you to open in Visual Studio*.
 
 Alternatively, you can simply open Visual Studio and click `File > Open > CMake...` and just open the `CMakeLists.txt`
 file directly for a slightly different development experience.
+
+#### Visual Studio 2019 users on an x86_64 Windows Host
+You have to manually force CMake to generate files for x86 architecture; can only do this from Command-line so far.
+
+```powershell
+mkdir build
+cd build
+cmake -G "Visual Studio 16 2019" -A Win32 ..
+```
+
 
 ## Explanation of Every Important File
 

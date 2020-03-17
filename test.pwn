@@ -12,5 +12,5 @@ main() {
 Test:RunTest() {
     new ret = MyFunction();
     printf("ret: %d", ret);
-    ASSERT(ret == 1);
+    ASSERT(ret == 0);
 }
